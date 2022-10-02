@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Кристина Бородина](https://up.htmlacademy.ru/htmlcss/35/user/2157947).
-* Наставник: [Олег Цыганов] (https://htmlacademy.ru/profile/olegtsyganov).
+* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
