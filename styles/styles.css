@@ -564,7 +564,6 @@ body {
   margin: 0;
   padding: 12px 0;
   border: 0;
-
 }
 
 .cost {
@@ -637,7 +636,6 @@ body {
   min-width: 292px;
   margin-right: 70px;
   margin-left: auto;
-
 }
 
 .button-light {
@@ -653,17 +651,29 @@ body {
 }
 
 .product-list {
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  margin: 0 0 80px;
   padding: 0;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
+  padding: 20px 20px;
 }
 
 .product-price {
   display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
+}
+
+.button-favourites {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
 }
 
 .product-card-link {
@@ -671,9 +681,13 @@ body {
   text-decoration: none;
 }
 
+.product-card-image {
+  margin: 0 0 16px;
+}
+
 .product-card-title {
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+  padding: 0;
 }
 
 .product-card-type-of-housing {
@@ -694,17 +708,27 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  max-width: 232px;
+  max-width: 140px;
   width: 100%;
+  padding: 8px 26px;
 }
 
 .product-card-favourites {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  max-width: 232px;
+  max-width: 140px;
   width: 100%;
   background-color: #82B3D3;
+  padding: 8px 20px;
+}
+
+.hotels-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .rating {
@@ -712,12 +736,14 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-align: center;
+  background-color: #F2F2F2;
+  padding: 8px 22px;
 }
 
 .pagination {
   display: flex;
   margin: 0;
-  padding: 80px 0 0;
+  padding: 0;
   list-style-type: none;
 }
 
