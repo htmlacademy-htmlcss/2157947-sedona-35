@@ -31,7 +31,7 @@
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"
-                  fill="#000" />
+                  fill="#000"/>
               </svg>
             </a>
           </li>
@@ -113,7 +113,7 @@
         <p class="appointment-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в
           Седоне</p>
-        <a href="catalog.html" class="button appointment-button" type="submit">Поиск гостиницы в седоне</a>
+        <a class="button appointment-button" href="catalog.html"  type="submit">Поиск гостиницы в седоне</a>
       </section>
       <section class="newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
@@ -177,6 +177,74 @@
         </section>
       </div>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
+          <span class="images-cross"></span>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="appointment-form-date">
+              <div class="arrival-date">
+              <label class="form-labels" for="appointment-date">
+                Дата заезда:</label>
+              <input class="field-date" type="text" id="appointment-date" name="appointment-date" placeholder="Укажите дату" value="27 апреля 2020">
+                <svg class="calendar" width="16" height="15" viewBox="0 0 16 15" fill="cerrentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000"/><path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000"/><path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+              <span class="warning">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            <div class="departure-date">
+              <label class="form-labels" for="appointment-date">
+                Дата выезда:</label>
+              <input class="field-date" type="text" id="appointment-date-departure" name="appointment-date" placeholder="Укажите дату" value="1 сентября 2023">
+              <svg class="calendar" width="16" height="15" viewBox="0 0 16 15" fill="cerrentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000"/><path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000"/><path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+              <span class="feedback">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+              <div class="size">
+            <section class="appointment-form-adults">
+              <label class="form-labels">
+                Взрослые:
+              </label>
+            <div class="adults-count-wrapper">
+              <button class="quantity-minus-button" type="button" onclick="this.nextElementSibling.stepDown()">
+                <span class="visually-hidden">Уменьшить количество взрослых.</span>
+              </button>
+              <input class="quantity-input" type="number" min="0" max="100" value="2">
+                <button class="quantity-plus-button" type="button" onclick="this.previousElementSibling.stepUp()">
+                <span class="visually-hidden">Увеличить количество взрослых.</span>
+              </button>
+            </div>
+            </section>
+            <section class="appointment-form-children">
+              <span class="form-labels form-label-icon">
+              <label class="form-labels">
+                Дети:
+              </label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z"/></svg>
+                </button>
+              </span>
+              <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+              <div class="children-count-wrapper">
+              <button class="quantity-minus-button" type="button" onclick="this.nextElementSibling.stepDown()">
+                <span class="visually-hidden">Уменьшить количество детей.</span>
+              </button>
+              <input class="quantity-input" type="number" min="0" max="100" value="2">
+                <button class="quantity-plus-button" type="button" onclick="this.previousElementSibling.stepUp()">
+                <span class="visually-hidden">Увеличить количество детей.</span>
+              </button>
+              </div>
+            </section>
+            </div>
+          </div>
+            <button class="button appointment-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
