@@ -729,9 +729,11 @@ body {
 }
 
 .field-date {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  width: 452px;
+  font-weight: 700;
+  width: 440px;
   border: 4px;
   background-color: #F2F2F2;
   padding: 14px 20px;
@@ -762,27 +764,26 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #FF5757;
-  margin: 0 0 23px 157px;
+  width: 100%;
+  grid-column: 2/-1;
+  padding-left: 20px;
 }
 
-.feedback {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
+.feedback-text {
   color: #333333;
-  margin-left: 157px;
 }
 
 .quantity-input {
   background-color: #F2F2F2;
   border: none;
-  padding: 14px 10px;
+  padding: 0;
   width: 31px;
   height: 48px;
   margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  text-align: center;
 }
 
 .quantity-input::-webkit-outer-spin-button,
@@ -792,17 +793,14 @@ body {
 }
 
 .quantity-minus-button {
+  display: flex;
   background-color: #F2F2F2;
   border: none;
-  padding: 14px 10px;
+ justify-content: center;
+ align-items: center;
   width: 40px;
   height: 48px;
   margin: 0;
-  background-image: url("../images/minus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px 0 0 4px;
-  cursor: pointer;
 }
 
 .quantity-plus-button {
@@ -812,16 +810,33 @@ body {
   width: 40px;
   height: 48px;
   margin: 0;
-  background-image: url("../images/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+}
+.count-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+.count-icon:hover {
+  fill: #000000;
+}
+
+.count-icon:focus {
+  border: 3px solid #82B3D3;
+  border-radius: 4px;
+  fill: #000000;
+}
+.quantity-minus-button:focus, .quantity-plus-button:focus {
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+.count:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .appointment-submit {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   padding: 18px 0;
@@ -838,6 +853,7 @@ body {
   padding: 0;
   margin: 0;
   display: block;
+  transform: translateX(190%);
 }
 
 .tooltip-icon {
@@ -846,14 +862,11 @@ body {
   color: #FFFFFF;
   display: block;
   cursor: pointer;
+  position: relative;
 }
 
 .tooltip-toggle:hover .tooltip-icon:hover {
   opacity: 0.7;
-}
-
-.departure-date {
-  margin-bottom: 23px;
 }
 
 .appointment-submit:hover, .appointment-submit:focus {
@@ -885,10 +898,15 @@ body {
   border-radius: 10px;
   position: absolute;
   left: 50%;
-  transform: translateY(30%);
+  transform: translateX(-27%) translateY(10%);
   z-index: 1;
+  display: none;
 }
 
+.tooltip-toggle:hover+.tooltip-text,
+.tooltip-toggle:focus+.tooltip-text {
+  display: block;
+}
 
 .tooltip-text::after {
   position: absolute;
@@ -1311,19 +1329,31 @@ body {
   margin-left: 82px;
 }
 
-.size {
+.modal-wrapper {
   display: flex;
   margin-bottom: 48px;
   justify-content: space-between;
 }
 
+.select-a-date {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 119px 1fr;
+  gap: 4px 18px;
+  margin-bottom: 23px;
+}
+
+.calendar {
+  position: absolute;
+  top: 35%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
 .appointment-form-adults {
   display: flex;
   align-items: center;
-}
-
-.arrival-date {
-  margin-bottom: 23px;
 }
 
 .appointment-form-children {
